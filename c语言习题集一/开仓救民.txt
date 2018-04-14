@@ -1,0 +1,21 @@
+# include<stdio.h>
+int main()
+{
+    double t,sum,n;
+    int i;
+    while(scanf("%lf",&n)!=EOF)
+    {
+        if(n<=0)printf("0\n");
+        else
+        {
+        i=1;t=1;sum=1;
+        while(sum<n)
+        {
+        t=t*2;
+        sum+=t;
+        i++;
+        }
+    printf("%d\n",i);
+    }}
+    return 0;
+}

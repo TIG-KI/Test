@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  int a[10],f;
+  while(scanf("%d",&a[0])!=EOF)
+  {
+    for(f = 1;f < 9; f++) scanf("%d",&a[f]);
+    int len1 = (a[0]-a[3])*(a[0]-a[3]) + (a[1]-a[4])*(a[1]-a[4]) + (a[2]-a[5])*(a[2]-a[5]);
+    int len2 = (a[0]-a[6])*(a[0]-a[6]) + (a[1]-a[7])*(a[1]-a[7]) + (a[2]-a[8])*(a[2]-a[8]);
+    int len3 = (a[6]-a[3])*(a[6]-a[3]) + (a[7]-a[4])*(a[7]-a[4]) + (a[8]-a[5])*(a[8]-a[5]);
+    double tem1 = sqrt(len1),tem2 = sqrt(len2),tem3 = sqrt(len3);
+    if(fabs(tem1-tem2)>=tem3||tem1+tem2<=tem3||fabs(tem3-tem2)>=tem1||tem3+tem2<=tem1||fabs(tem1-tem3)>=tem2||tem1+tem3<=tem2)
+    {
+      printf("None\n");
+      continue;
+    }
+    int b = len1 + len2 - len3;
+    int c = len2 + len3 - len1;
+    int d = len1 + len3 - len2;
+    if(a<0||b<0||c<0) printf("Big\n");
+    else if(a>0&&b>0&&c>0) printf("Small\n");
+    else if(a==0||b==0||c==0) printf("Middle\n");
+  }
+  return 0;
+}

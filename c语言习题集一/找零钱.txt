@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <string.h>
+main()
+{
+    int a,b,c,d;
+    while(scanf("%d %d",&a,&b)!=EOF)
+    {
+      d=0;
+      printf("%d\n",a-b);
+      if(((a-b)/100)!=0)
+      {
+          printf("100*%d",(a-b)/100);
+          d=1;
+      }
+      c=(a-b)%100;
+      if(c/50!=0)
+      {
+          if(d==1)
+              printf("+");
+          printf("50*%d",c/50);
+          d=1;
+      }
+      c=c%50;
+      if(c/20!=0)
+      {
+          if(d==1)
+              printf("+");
+          printf("20*%d",c/20);
+          d=1;
+      }
+      c=c%20;
+      if(c/10!=0)
+      {
+          if(d==1)
+              printf("+");
+          printf("10*%d",c/10);
+          d=1;
+      }
+      c=c%10;
+      if(c/5!=0)
+      {
+          if(d==1)
+              printf("+");
+          printf("5*%d",c/5);
+          d=1;
+      }
+      c=c%5;
+      if(c/1!=0)
+      {
+          if(d==1)
+              printf("+");
+          printf("1*%d",c/1);
+      }
+      printf("=%d\n",a-b);
+    }
+}

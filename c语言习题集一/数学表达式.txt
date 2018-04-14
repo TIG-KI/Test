@@ -1,0 +1,42 @@
+# include<stdio.h>
+int main()
+{
+    int f(int n,int m);
+    int g(int n,int m);
+    int n,m;
+    int z,b=37,l;
+    float c;
+    while(scanf("%d %d",&n,&m)!=EOF)
+    {
+    z=f(n,m);
+    c=n*1.0/m;//乘以1.0才有意义
+    printf("%d / %d = %.2f\r\n",n,m,c);
+    if(z%10>=5)
+        printf("%d / %d = %d",n,m,z/10+1);
+    else
+        printf("%d / %d = %d",n,m,z/10);
+    printf("%c\r\n",b);//%要以字符形式才可输出
+    printf("%d / %d = ",n,m);
+    l=g(n,m);n=n/l;m=m/l;
+    if(n%m==0)printf("%d / 1\r\n",n/m);
+    else
+    {
+        if(n/m==0)printf("%d / %d\r\n",n,m);
+        else printf("%d ( %d / %d )\r\n",n/m,n%m,m);
+    }}
+    return 0;
+}
+int f(int n,int m)
+{
+    float h;
+    h=n*1000.0/m;
+    return h;
+}
+int g(int n,int m)
+{
+    int i;
+    if(n>m){i=n;n=m;m=i;}
+    for(i=n;i>=1;i--)
+        if(n%i==0&&m%i==0)break;
+    return i;
+}

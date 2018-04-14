@@ -1,0 +1,13 @@
+# include<stdio.h>
+int main()
+{
+    int t;
+    float s,m;
+    scanf("%d %f",&t,&s);
+    if(t<0 || t>168)
+        printf("input is wrong!\n");
+    else if(t<=40) {m=s*t;printf("%g\n",m);}
+    else if(t<=60) {m=s*40+s*3*(t-40)/2;printf("%g\n",m);}
+    else {m=s*70+s*3*(t-60);printf("%g\n",m);}
+    return 0;
+}

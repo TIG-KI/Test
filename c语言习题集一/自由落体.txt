@@ -1,0 +1,15 @@
+# include<stdio.h>
+int main()
+{
+    int n,i=1;
+    float m,sum=0.0;
+    scanf("%f %d",&m,&n);
+    for(i=1;i<=n;i++)
+    {
+        sum=sum+m/2*3;
+        m=m/2;
+    }
+    sum=sum-m;
+    printf("%.2f %.2f\n",m,sum);
+    return 0;
+}

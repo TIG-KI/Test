@@ -1,0 +1,23 @@
+# include<stdio.h>
+int main()
+{
+    int a,b,c,d;
+    int l=0,r=0;
+    while(scanf("%d %d %d %d",&a,&b,&c,&d)!=EOF)
+    {
+        l=0;r=0;
+        if(a%d==0)
+            r=a/d;
+        else 
+            r=a/d+1;
+        if(c%b==0)
+            l=c/b;
+        else
+            l=c/b+1;
+        if(l<=r)
+            printf("Left\n");
+        else 
+            printf("Right\n");
+    }
+    return 0;
+}

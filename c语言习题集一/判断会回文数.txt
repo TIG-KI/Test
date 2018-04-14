@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+main()
+{
+    char a[200];
+    bool pan;
+    while(scanf("%s",a)!=EOF)
+    {
+      pan=true;
+      int l=strlen(a);
+      for(int f=0;f<(l-1)/2;f++)
+      {
+        if(a[f]!=a[l-1-f])
+        pan=false;
+      }
+      if(pan==false)
+          printf("No\n");
+      else
+          printf("Yes\n");
+    }
+}

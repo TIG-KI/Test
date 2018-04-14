@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+main()
+{
+    int ah,am,as,bh,bm,bs;
+    while(scanf("%d %d %d %d %d %d",&ah,&am,&as,&bh,&bm,&bs)!=EOF)
+    {
+      int tem;
+      as+=bs;
+      tem=as/60;
+      as%=60;
+      am+=bm+tem;
+      tem=am/60;
+      am%=60;
+      ah+=bh+tem;
+      if(ah<10)
+          printf("0%d:",ah);
+      else
+          printf("%d:",ah);
+      if(am<10)
+          printf("0%d:",am);
+      else
+          printf("%d:",am);
+      if(as<10)
+          printf("0%d\n",as);
+      else
+          printf("%d\n",as);
+    }
+}

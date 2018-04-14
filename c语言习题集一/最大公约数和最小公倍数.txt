@@ -1,0 +1,37 @@
+#include <iostream>  
+using namespace std;  
+  
+int main()  
+{  
+    //cout << "请输入两个正整数：" << endl;  
+    int m,n;  
+    cin >> m >> n;  
+    int a,b,c,d;  
+    if (m>=n)  
+    {  
+        a = n;  
+        c = m;  
+    }  
+    else  
+    {  
+        a = m;  
+        c = n;  
+    }  
+    for (int i=1; i<=a; i++)  
+    {  
+        if ((m%i == 0)&&(n%i == 0))  
+        {  
+            b = i;  
+        }  
+    }  
+    for (int j=1; j<=a; j++)  
+    {  
+        if (((j*c)%m == 0)&&((j*c)%n == 0))  
+        {  
+            d = j*c;  
+            break;  
+        }  
+    }  
+    cout << b << " " << d << endl;  
+    return 0;  
+}  
