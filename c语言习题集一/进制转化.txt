@@ -1,0 +1,46 @@
+# include<stdio.h>
+int main()
+{
+    void f(int x);
+    void g(int y);
+    int n;
+    while(scanf("%d",&n)!=EOF)
+    {f(n);g(n);}
+    return 0;
+}
+void f(int x)
+{   
+    int a[21]={0},i=0;
+    if(x==0)printf("0\n");
+    else
+    {
+        while(x!=1)
+        {
+        a[i]=x%2;
+        x=x/2;
+        i++;
+        }
+        a[i]=1;
+        for(;i>=0;i--)
+            printf("%d",a[i]);
+        printf("\n");
+    }
+}
+void g(int y)
+{
+    int a[21]={0},i=0;
+    if(y<8)printf("%d\n",y);
+    else
+    {
+        while(y>=8)
+        {
+        a[i]=y%8;
+        y=y/8;
+        i++;
+        }
+        a[i]=y;
+        for(;i>=0;i--)
+            printf("%d",a[i]);
+        printf("\n");
+    }
+}

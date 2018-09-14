@@ -1,0 +1,24 @@
+#include <stdio.h>
+main()
+{
+  int n,te;
+  while(scanf("%d",&n)!=EOF)
+  {
+    int tem=0,sum=0;
+    for(int f=0;f<n;f++)
+    {
+      scanf("%d",&te);
+      if(te>tem)
+      {
+        sum+=6*(te-tem)+5;
+        tem=te;
+      }
+      else
+      {
+        sum+=4*(tem-te)+5;
+        tem=te;
+      }
+    }
+    printf("%d\n",sum);
+  }
+}

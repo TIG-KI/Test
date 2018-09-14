@@ -1,0 +1,24 @@
+//最简单的题
+#include<stdio.h>
+int main()
+{
+	int x,i;
+	while(scanf("%d",&x)!=EOF)
+	{
+		
+		for(i=0;;i++)
+		{
+			if(x==i*i*i*i+3*i*i*i+2*i*i+8*i+9)
+			{
+				printf("%d\n",i);
+				break; 
+			}
+			if(x<i*i*i*i+3*i*i*i+2*i*i+8*i+9)
+			{
+				printf("NO\n");
+				break;
+			}
+		}
+	}
+	return 0;
+ } 

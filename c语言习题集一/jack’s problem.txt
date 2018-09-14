@@ -1,0 +1,12 @@
+#include <stdio.h>
+main()
+{
+  double x1,y1,x2,y2,x3,y3;
+  while(scanf("%lf%lf%lf%lf%lf%lf",&x1,&y1,&x2,&y2,&x3,&y3)!=EOF)
+  {
+    double tem=((x1*y2-x2*y1)+(x2*y3-x3*y2)+(x3*y1-x1*y3))/2;
+    if(tem<0)
+        tem*=-1;
+    printf("%.1lf\n",tem);
+  }
+}
